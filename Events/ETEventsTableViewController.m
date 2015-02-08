@@ -10,7 +10,11 @@
 
 #import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 
+#import <Parse/Parse.h>
+
 @interface ETEventsTableViewController () <UITableViewDataSource>
+
+@property (strong, nonatomic) NSArray *events;
 
 @end
 
@@ -26,7 +30,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.title = @"Events";
-
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     [self loadData];
 }
 
@@ -50,7 +56,10 @@
         }
     }];
     
-    
+    PFQuery *query = [PFQuery queryWithClassName:@"Event"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.events = objects;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,7 +78,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return [self.events count];
 }
 
 
@@ -77,7 +86,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Event" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = @"Test";
+    cell.textLabel.text = [self.events[indexPath.row] objectForKey:@"name"];
     
     return cell;
 }
