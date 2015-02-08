@@ -16,12 +16,36 @@
 
 @implementation LoginViewController
 
+#pragma mark - FBLoginViewDelegate
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    [self handleLoginSession];
+}
+
+- (void)handleLoginSession {
+    if ([PFUser currentUser]) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(logInViewControllerDidLogUserIn:)]) {
+            [self.delegate performSelector:@selector(logInViewControllerDidLogUserIn:) withObject:[PFUser currentUser]];
+        }
+    }
+    
+    
+}
+
+#pragma mark - VC Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     FBLoginView *loginView = [[FBLoginView alloc] init];
     loginView.center = self.view.center;
     [self.view addSubview:loginView];
+    
+    loginView.delegate = self;
+
+    [[PFUser currentUser] setObject:@"Justin" forKey:@"name"];
+    [[PFUser currentUser] save];
 }
 
 - (void)didReceiveMemoryWarning {

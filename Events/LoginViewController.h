@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 
-@interface LoginViewController : UIViewController
+@protocol LoginViewControllerDelegate;
+
+@interface LoginViewController : UIViewController <FBLoginViewDelegate>
+
+@property (nonatomic, assign) id<LoginViewControllerDelegate> delegate;
+
+@end
+
+@protocol LoginViewControllerDelegate <NSObject>
+
+- (void)logInViewControllerDidLogUserIn:(LoginViewController *)logInViewController;
 
 @end
