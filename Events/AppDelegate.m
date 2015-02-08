@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 #import "ETWelcomeViewController.h"
 
@@ -21,6 +22,11 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Logs 'install' and 'app activate' App Events.
     [FBAppEvents activateApp];
+    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [[PFFacebookUtils session] close];
 }
 
 - (BOOL)application:(UIApplication *)application
@@ -28,7 +34,7 @@
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
     // attempt to extract a token from the url
-    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -44,7 +50,7 @@
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+    [PFFacebookUtils initializeFacebook];
     return YES;
 }
 
@@ -62,17 +68,12 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
 
 - (void)logOut {
     [PFUser logOut];
     [FBSession setActiveSession:nil];
     
-    ETWelcomeViewController *wvc = (ETWelcomeViewController *)[]
-    
-    []
+    //ETWelcomeViewController *wvc = (ETWelcomeViewController *)[]
 }
 
 @end

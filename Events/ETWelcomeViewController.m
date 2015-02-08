@@ -38,7 +38,7 @@
 #pragma mark - LoginViewControllerDelegate
 
 - (void)logInViewControllerDidLogUserIn:(LoginViewController *)logInViewController {
-    
+    NSLog(@"received delgate");
 }
 
 #pragma mark - VC Lifecycle
@@ -47,7 +47,6 @@
     [super viewWillAppear:animated];
     
     if (![PFUser currentUser]) {
-        NSLog(@"inside");
         [self presentLoginViewController];
         return;
     }

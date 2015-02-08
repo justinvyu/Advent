@@ -21,7 +21,6 @@
 		D0A3B19C1A86C970005E1200 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B19B1A86C970005E1200 /* libz.dylib */; };
 		D0A3B19E1A86C978005E1200 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B19D1A86C978005E1200 /* libsqlite3.dylib */; };
 		D0A3B1A11A86CA14005E1200 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1A01A86CA14005E1200 /* LoginViewController.m */; };
-		D0A3B1A61A86DCC8005E1200 /* ETWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1A51A86DCC8005E1200 /* ETWelcomeViewController.m */; };
 		D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */; };
 		D0C15D551A86C58D00AD9D74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D541A86C58D00AD9D74 /* main.m */; };
 		D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D571A86C58D00AD9D74 /* AppDelegate.m */; };
@@ -29,6 +28,8 @@
 		D0C15D601A86C58D00AD9D74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D5F1A86C58D00AD9D74 /* Images.xcassets */; };
 		D0C15D631A86C58D00AD9D74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D611A86C58D00AD9D74 /* LaunchScreen.xib */; };
 		D0C15D6F1A86C58D00AD9D74 /* EventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D6E1A86C58D00AD9D74 /* EventsTests.m */; };
+		D0EE15001A871A530061A9A4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE14FF1A871A530061A9A4 /* TestViewController.m */; };
+		D0EE15031A871F7D0061A9A4 /* ETTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,8 +59,6 @@
 		D0A3B19D1A86C978005E1200 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		D0A3B19F1A86CA14005E1200 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D0A3B1A01A86CA14005E1200 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		D0A3B1A41A86DCC8005E1200 /* ETWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETWelcomeViewController.h; sourceTree = "<group>"; };
-		D0A3B1A51A86DCC8005E1200 /* ETWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETWelcomeViewController.m; sourceTree = "<group>"; };
 		D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEventsTableViewController.h; sourceTree = "<group>"; };
 		D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETEventsTableViewController.m; sourceTree = "<group>"; };
 		D0C15D4F1A86C58D00AD9D74 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +72,10 @@
 		D0C15D681A86C58D00AD9D74 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C15D6D1A86C58D00AD9D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C15D6E1A86C58D00AD9D74 /* EventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsTests.m; sourceTree = "<group>"; };
+		D0EE14FE1A871A530061A9A4 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		D0EE14FF1A871A530061A9A4 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		D0EE15011A871F7D0061A9A4 /* ETTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTabBarController.h; sourceTree = "<group>"; };
+		D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTabBarController.m; sourceTree = "<group>"; };
 		E2F4DE70B10C0B23915184AC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,8 +151,10 @@
 		D0A3B1A31A86CA20005E1200 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0A3B1A41A86DCC8005E1200 /* ETWelcomeViewController.h */,
-				D0A3B1A51A86DCC8005E1200 /* ETWelcomeViewController.m */,
+				D0EE15011A871F7D0061A9A4 /* ETTabBarController.h */,
+				D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */,
+				D0EE14FE1A871A530061A9A4 /* TestViewController.h */,
+				D0EE14FF1A871A530061A9A4 /* TestViewController.m */,
 				D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */,
 				D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */,
 				D0A3B19F1A86CA14005E1200 /* LoginViewController.h */,
@@ -353,11 +358,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0A3B1A61A86DCC8005E1200 /* ETWelcomeViewController.m in Sources */,
 				D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */,
 				D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */,
 				D0C15D551A86C58D00AD9D74 /* main.m in Sources */,
 				D0A3B1A11A86CA14005E1200 /* LoginViewController.m in Sources */,
+				D0EE15031A871F7D0061A9A4 /* ETTabBarController.m in Sources */,
+				D0EE15001A871A530061A9A4 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

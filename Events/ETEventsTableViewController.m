@@ -8,6 +8,8 @@
 
 #import "ETEventsTableViewController.h"
 
+#import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
+
 @interface ETEventsTableViewController ()
 
 @end
@@ -22,6 +24,30 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    [self loadData];
+}
+
+- (void)loadData {
+    FBRequest *request = [FBRequest requestForMe];
+    
+    [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            NSDictionary *userInfo = (NSDictionary *)result;
+            
+            NSString *name = userInfo[@"name"];
+            NSString *location = userInfo[@"location"][@"name"];
+            NSString *birthday = userInfo[@"birthday"];
+            NSString *facebookID = userInfo[@"id"];
+            
+            NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+            
+            NSLog(@"%@, %@, %@", name, location, birthday);
+            
+            
+            
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,24 +60,24 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return 4;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Event" forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
