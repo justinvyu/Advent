@@ -8,6 +8,8 @@
 
 #import "ETWelcomeViewController.h"
 #import "LoginViewController.h"
+#import "ETEventsTableViewController.h"
+#import "AppDelegate.h"
 
 #import <Parse/Parse.h>
 
@@ -19,20 +21,18 @@
 @implementation ETWelcomeViewController
 
 - (void)presentLoginViewController {
-    /*
-    
-     */
-    
     LoginViewController *lvc = (LoginViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"LoginVC"];
     
-    [self presentViewController:lvc animated:NO completion:nil];
+    [self presentViewController:lvc animated:NO completion:^{
+        NSLog(@"Presented Login VC");
+    }];
 }
 
 - (void)presentEventsViewController {
     UINavigationController *nvc = (UINavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"EventsNVC"];
-    LoginViewController *lvc = (LoginViewController *)[[nvc viewControllers] objectAtIndex:0];
-    
-    lvc.delegate = self;
+    [self presentViewController:nvc animated:NO completion:^{
+        NSLog(@"presented Events VC");
+    }];
 }
 
 #pragma mark - LoginViewControllerDelegate
@@ -52,7 +52,9 @@
         return;
     }
     
+    [self presentEventsViewController];
     
+    //[[PFUser currentUser] fetchInBackgroundWithTarget:self selector:@selector(refreshCurrentUserCallbackWithResult:error:)];
 }
 
 - (void)viewDidLoad {

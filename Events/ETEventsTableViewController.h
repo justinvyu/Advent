@@ -1,5 +1,5 @@
 //
-//  ETEventsTabViewController.h
+//  ETEventsTableViewController.h
 //  Events
 //
 //  Created by Justin Yu on 2/7/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ETEventsTabViewController : UITabViewController
+@interface ETEventsTableViewController : UITableViewController
 
 @end

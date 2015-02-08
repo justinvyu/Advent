@@ -8,6 +8,9 @@
 
 #import "LoginViewController.h"
 #import <Parse/Parse.h>
+
+#import <ParseFacebok>
+
 #import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 
 @interface LoginViewController ()
@@ -29,6 +32,37 @@
         }
     }
     
+    NSString *accessToken = [[[FBSession activeSession] accessTokenData] accessToken];
+    NSDate *expirationDate = [[[FBSession activeSession] accessTokenData] expirationDate];
+    NSString *facebookUserId = [[[FBSession activeSession] accessTokenData] userID];
+    
+    if (!accessToken || !facebookUserId) {
+        NSLog(@"Login failure. FB Access Token or user ID does not exist");
+        return;
+    }
+    
+    /*
+    if ([[FBSession activeSession] respondsToSelector:@selector(clearAffinitizedThread:)]) {
+        [[FBSession activeSession] performSelector:@selector(clearAffinitizedThread:)];
+    }
+     */
+    
+    [PFFacebookUtils logInWithFacebookId:facebookUserId
+                             accessToken:accessToken
+                          expirationDate:expirationDate
+                                   block:^(PFUser *user, NSError *error) {
+                                       
+                                       if (!error) {
+                                           [self.hud removeFromSuperview];
+                                           if (self.delegate) {
+                                               if ([self.delegate respondsToSelector:@selector(logInViewControllerDidLogUserIn:)]) {
+                                                   [self.delegate performSelector:@selector(logInViewControllerDidLogUserIn:) withObject:user];
+                                               }
+                                           }
+                                       } else {
+                                           [self cancelLogIn:error];
+                                       }
+                                   }];
     
 }
 
@@ -43,9 +77,6 @@
     [self.view addSubview:loginView];
     
     loginView.delegate = self;
-
-    [[PFUser currentUser] setObject:@"Justin" forKey:@"name"];
-    [[PFUser currentUser] save];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -22,7 +22,7 @@
 		D0A3B19E1A86C978005E1200 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B19D1A86C978005E1200 /* libsqlite3.dylib */; };
 		D0A3B1A11A86CA14005E1200 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1A01A86CA14005E1200 /* LoginViewController.m */; };
 		D0A3B1A61A86DCC8005E1200 /* ETWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1A51A86DCC8005E1200 /* ETWelcomeViewController.m */; };
-		D0A3B1A91A86F1DD005E1200 /* ETEventsTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1A81A86F1DD005E1200 /* ETEventsTabViewController.m */; };
+		D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */; };
 		D0C15D551A86C58D00AD9D74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D541A86C58D00AD9D74 /* main.m */; };
 		D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D571A86C58D00AD9D74 /* AppDelegate.m */; };
 		D0C15D5E1A86C58D00AD9D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D5C1A86C58D00AD9D74 /* Main.storyboard */; };
@@ -60,8 +60,8 @@
 		D0A3B1A01A86CA14005E1200 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D0A3B1A41A86DCC8005E1200 /* ETWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETWelcomeViewController.h; sourceTree = "<group>"; };
 		D0A3B1A51A86DCC8005E1200 /* ETWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETWelcomeViewController.m; sourceTree = "<group>"; };
-		D0A3B1A71A86F1DD005E1200 /* ETEventsTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEventsTabViewController.h; sourceTree = "<group>"; };
-		D0A3B1A81A86F1DD005E1200 /* ETEventsTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETEventsTabViewController.m; sourceTree = "<group>"; };
+		D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETEventsTableViewController.h; sourceTree = "<group>"; };
+		D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETEventsTableViewController.m; sourceTree = "<group>"; };
 		D0C15D4F1A86C58D00AD9D74 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C15D531A86C58D00AD9D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C15D541A86C58D00AD9D74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 			children = (
 				D0A3B1A41A86DCC8005E1200 /* ETWelcomeViewController.h */,
 				D0A3B1A51A86DCC8005E1200 /* ETWelcomeViewController.m */,
-				D0A3B1A71A86F1DD005E1200 /* ETEventsTabViewController.h */,
-				D0A3B1A81A86F1DD005E1200 /* ETEventsTabViewController.m */,
+				D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */,
+				D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */,
 				D0A3B19F1A86CA14005E1200 /* LoginViewController.h */,
 				D0A3B1A01A86CA14005E1200 /* LoginViewController.m */,
 			);
@@ -355,8 +355,8 @@
 			files = (
 				D0A3B1A61A86DCC8005E1200 /* ETWelcomeViewController.m in Sources */,
 				D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */,
+				D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */,
 				D0C15D551A86C58D00AD9D74 /* main.m in Sources */,
-				D0A3B1A91A86F1DD005E1200 /* ETEventsTabViewController.m in Sources */,
 				D0A3B1A11A86CA14005E1200 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

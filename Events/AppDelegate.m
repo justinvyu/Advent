@@ -10,6 +10,8 @@
 #import <Parse/Parse.h>
 #import <Facebook-iOS-SDK/FacebookSDK/FacebookSDK.h>
 
+#import "ETWelcomeViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -62,6 +64,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)logOut {
+    [PFUser logOut];
+    [FBSession setActiveSession:nil];
+    
+    ETWelcomeViewController *wvc = (ETWelcomeViewController *)[]
+    
+    []
 }
 
 @end
