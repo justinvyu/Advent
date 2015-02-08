@@ -12,7 +12,7 @@
 
 #import <Parse/Parse.h>
 
-@interface ETEventsTableViewController () //<UITableViewDataSource>
+@interface ETEventsTableViewController () <UITableViewDataSource>
 
 @property (strong, nonatomic) NSArray *events;
 
@@ -30,10 +30,10 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.title = @"Events";
-    /*
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    */
+    
     [self loadData];
 }
 
@@ -88,6 +88,7 @@
     
     // Configure the cell...
     cell.textLabel.text = [self.events[indexPath.row] objectForKey:@"name"];
+    NSLog(@"%@", [self.events[indexPath.row] objectForKey:@"name"]);
     
     return cell;
 }

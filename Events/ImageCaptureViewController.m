@@ -18,7 +18,6 @@
 // Storyboard Outlets
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet AVCamPreviewView *previewView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageDisplayView;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 // Image Things
