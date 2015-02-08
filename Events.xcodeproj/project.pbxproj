@@ -34,6 +34,7 @@
 		D0EE15141A8734640061A9A4 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE150F1A8734640061A9A4 /* UIImage+AlphaAdditions.m */; };
 		D0EE15151A8734640061A9A4 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15111A8734640061A9A4 /* UIImage+ResizeAdditions.m */; };
 		D0EE15161A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15131A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m */; };
+		D0EE151C1A87430F0061A9A4 /* ETPhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE151B1A87430F0061A9A4 /* ETPhotosTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		D0EE15111A8734640061A9A4 /* UIImage+ResizeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeAdditions.m"; sourceTree = "<group>"; };
 		D0EE15121A8734640061A9A4 /* UIImage+RoundedCornerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCornerAdditions.h"; sourceTree = "<group>"; };
 		D0EE15131A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCornerAdditions.m"; sourceTree = "<group>"; };
+		D0EE151A1A87430F0061A9A4 /* ETPhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETPhotosTableViewController.h; sourceTree = "<group>"; };
+		D0EE151B1A87430F0061A9A4 /* ETPhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETPhotosTableViewController.m; sourceTree = "<group>"; };
 		E2F4DE70B10C0B23915184AC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,12 +166,10 @@
 		D0A3B1A31A86CA20005E1200 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0EE15191A8742E00061A9A4 /* TabViewControllers */,
+				D0EE15181A8742D50061A9A4 /* TableViewControllers */,
 				D0EE150B1A872C3B0061A9A4 /* ImageCaptureViewController.h */,
 				D0EE150C1A872C3B0061A9A4 /* ImageCaptureViewController.m */,
-				D0EE15011A871F7D0061A9A4 /* ETTabBarController.h */,
-				D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */,
-				D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */,
-				D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */,
 				D0A3B19F1A86CA14005E1200 /* LoginViewController.h */,
 				D0A3B1A01A86CA14005E1200 /* LoginViewController.m */,
 			);
@@ -256,6 +257,26 @@
 				D0EE15131A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		D0EE15181A8742D50061A9A4 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */,
+				D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */,
+				D0EE151A1A87430F0061A9A4 /* ETPhotosTableViewController.h */,
+				D0EE151B1A87430F0061A9A4 /* ETPhotosTableViewController.m */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		D0EE15191A8742E00061A9A4 /* TabViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0EE15011A871F7D0061A9A4 /* ETTabBarController.h */,
+				D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */,
+			);
+			name = TabViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +419,7 @@
 				D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */,
 				D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */,
 				D0C15D551A86C58D00AD9D74 /* main.m in Sources */,
+				D0EE151C1A87430F0061A9A4 /* ETPhotosTableViewController.m in Sources */,
 				D0EE15151A8734640061A9A4 /* UIImage+ResizeAdditions.m in Sources */,
 				D0A3B1A11A86CA14005E1200 /* LoginViewController.m in Sources */,
 				D0EE15141A8734640061A9A4 /* UIImage+AlphaAdditions.m in Sources */,

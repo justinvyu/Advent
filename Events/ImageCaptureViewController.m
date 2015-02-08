@@ -16,7 +16,10 @@
 @interface ImageCaptureViewController ()
 
 // Storyboard Outlets
+@property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet AVCamPreviewView *previewView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageDisplayView;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 // Image Things
 @property (strong, nonatomic) UIImage *stillImage;
@@ -45,6 +48,24 @@
 
 @implementation ImageCaptureViewController
 
+#pragma mark - Properties
+
+- (void)setStillImage:(UIImage *)stillImage {
+    _stillImage = stillImage;
+    
+    self.imageDisplayView.image = stillImage;
+}
+
+#pragma mark - Actions
+
+- (IBAction)touchCancelButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)touchNextButton:(id)sender {
+    
+}
+
 #pragma mark - VC Lifecycle
 
 - (void)viewDidLoad {
@@ -58,9 +79,6 @@
     
     // Properties
     self.captureModeOn = YES;
-    
-    // Square Indicators
-    
     
     // Tap Gesture
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
@@ -135,6 +153,7 @@
         self.previewView.hidden = YES;
         
         self.captureModeOn = NO;
+        self.imageDisplayView.hidden = NO;
         
         [self shouldUploadImage];
     } else {
@@ -143,6 +162,9 @@
         self.stillImage = nil;
         self.croppedImage = nil;
         self.resizedImage = nil;
+        
+        self.imageDisplayView.hidden = YES;
+        self.imageDisplayView.image = nil;
         
         self.captureModeOn = YES;
     }
@@ -154,17 +176,17 @@
     UIImage *resizedStillImage = [self.stillImage resizedImage:CGSizeMake(self.view.bounds.size.width,
                                                                           self.view.bounds.size.height)
                                           interpolationQuality:kCGInterpolationHigh];
-    /*
-    // Cropped image for testing
+    
+    CGFloat padding = (self.view.bounds.size.height - self.view.bounds.size.width) / 2;
+    
     self.croppedImage = [resizedStillImage croppedImage:CGRectMake(0,
-                                                                   self.headerView.bounds.size.height,
+                                                                   padding,
                                                                    self.view.bounds.size.width,
                                                                    self.view.bounds.size.width)];
     
-    self.resizedImage = [self.croppedImage resizedImage:CGSizeMake(kImageHeight, kImageHeight)
+    self.resizedImage = [self.croppedImage resizedImage:CGSizeMake(600, 600) // 600x600 px
                                    interpolationQuality:kCGInterpolationHigh];
     
-    */
     NSData *imageData = UIImageJPEGRepresentation(self.resizedImage, 1.0f);
     
     if (!imageData) {
@@ -212,44 +234,33 @@
         [[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:[[self stillImageOutput] connectionWithMediaType:AVMediaTypeVideo]
                                                              completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
                                                                  
-                         if (imageDataSampleBuffer)
-                         {
-                             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-                             // send over image and present edit vc
-                             UIImage *captureImage = [UIImage imageWithData:imageData];
-                             
-                             if (!captureImage)
-                                 return;
-                             
-                             self.stillImage = captureImage;
-                             /*
-                             [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
-                                 if (error) {
-                                     NSLog(@"Unable to get Location");
-                                 } else {
-                                     self.coordinate = geoPoint;
-                                     NSLog(@"Location is Set");
-                                 }
-                             }];
-                             
-                             
-                              CGFloat w_scaleFactor = captureImage.size.width / self.view.bounds.size.width;
-                              CGFloat h_scaleFactor = captureImage.size.height / self.view.bounds.size.height;
-                              
-                              NSLog(@"%f, %f", w_scaleFactor, h_scaleFactor);
-                              
-                              self.resizedImage = [[captureImage croppedImage:CGRectMake(0,
-                              self.headerView.bounds.size.height * w_scaleFactor,
-                              self.view.bounds.size.width * w_scaleFactor,
-                              self.view.bounds.size.width * w_scaleFactor)]
-                              resizedImage:CGSizeMake(kImageHeight, kImageHeight) interpolationQuality:kCGInterpolationHigh];
-                              
-                              
-                              */
-                             
-                             [self changeMode];
-                         }
-                     }];
+             if (imageDataSampleBuffer)
+             {
+                 NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+                 // send over image and present edit vc
+                 UIImage *captureImage = [UIImage imageWithData:imageData];
+                 
+                 if (!captureImage)
+                     return;
+                 
+                 self.stillImage = captureImage;
+                 
+                 if (self.stillImage) {
+                     NSLog(@"not nil");
+                 }
+                 /*
+                 [PFGeoPoint geoPointForCurrentLocationInBackground:^(PFGeoPoint *geoPoint, NSError *error) {
+                     if (error) {
+                         NSLog(@"Unable to get Location");
+                     } else {
+                         self.coordinate = geoPoint;
+                         NSLog(@"Location is Set");
+                     }
+                 }];
+                 */
+                 [self changeMode];
+             }
+         }];
     });
 
 }
