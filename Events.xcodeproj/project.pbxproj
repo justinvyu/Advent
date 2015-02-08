@@ -28,8 +28,12 @@
 		D0C15D601A86C58D00AD9D74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D5F1A86C58D00AD9D74 /* Images.xcassets */; };
 		D0C15D631A86C58D00AD9D74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D611A86C58D00AD9D74 /* LaunchScreen.xib */; };
 		D0C15D6F1A86C58D00AD9D74 /* EventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D6E1A86C58D00AD9D74 /* EventsTests.m */; };
-		D0EE15001A871A530061A9A4 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE14FF1A871A530061A9A4 /* TestViewController.m */; };
 		D0EE15031A871F7D0061A9A4 /* ETTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */; };
+		D0EE150A1A872BD60061A9A4 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15091A872BD60061A9A4 /* AVCamPreviewView.m */; };
+		D0EE150D1A872C3B0061A9A4 /* ImageCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE150C1A872C3B0061A9A4 /* ImageCaptureViewController.m */; };
+		D0EE15141A8734640061A9A4 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE150F1A8734640061A9A4 /* UIImage+AlphaAdditions.m */; };
+		D0EE15151A8734640061A9A4 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15111A8734640061A9A4 /* UIImage+ResizeAdditions.m */; };
+		D0EE15161A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EE15131A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,10 +76,18 @@
 		D0C15D681A86C58D00AD9D74 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C15D6D1A86C58D00AD9D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C15D6E1A86C58D00AD9D74 /* EventsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventsTests.m; sourceTree = "<group>"; };
-		D0EE14FE1A871A530061A9A4 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		D0EE14FF1A871A530061A9A4 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		D0EE15011A871F7D0061A9A4 /* ETTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ETTabBarController.h; sourceTree = "<group>"; };
 		D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ETTabBarController.m; sourceTree = "<group>"; };
+		D0EE15081A872BD60061A9A4 /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		D0EE15091A872BD60061A9A4 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		D0EE150B1A872C3B0061A9A4 /* ImageCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCaptureViewController.h; sourceTree = "<group>"; };
+		D0EE150C1A872C3B0061A9A4 /* ImageCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCaptureViewController.m; sourceTree = "<group>"; };
+		D0EE150E1A8734640061A9A4 /* UIImage+AlphaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AlphaAdditions.h"; sourceTree = "<group>"; };
+		D0EE150F1A8734640061A9A4 /* UIImage+AlphaAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AlphaAdditions.m"; sourceTree = "<group>"; };
+		D0EE15101A8734640061A9A4 /* UIImage+ResizeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeAdditions.h"; sourceTree = "<group>"; };
+		D0EE15111A8734640061A9A4 /* UIImage+ResizeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeAdditions.m"; sourceTree = "<group>"; };
+		D0EE15121A8734640061A9A4 /* UIImage+RoundedCornerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCornerAdditions.h"; sourceTree = "<group>"; };
+		D0EE15131A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCornerAdditions.m"; sourceTree = "<group>"; };
 		E2F4DE70B10C0B23915184AC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,10 +163,10 @@
 		D0A3B1A31A86CA20005E1200 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0EE150B1A872C3B0061A9A4 /* ImageCaptureViewController.h */,
+				D0EE150C1A872C3B0061A9A4 /* ImageCaptureViewController.m */,
 				D0EE15011A871F7D0061A9A4 /* ETTabBarController.h */,
 				D0EE15021A871F7D0061A9A4 /* ETTabBarController.m */,
-				D0EE14FE1A871A530061A9A4 /* TestViewController.h */,
-				D0EE14FF1A871A530061A9A4 /* TestViewController.m */,
 				D0A3B1AA1A86F2CD005E1200 /* ETEventsTableViewController.h */,
 				D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */,
 				D0A3B19F1A86CA14005E1200 /* LoginViewController.h */,
@@ -187,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				D0C15D5C1A86C58D00AD9D74 /* Main.storyboard */,
+				D0EE15171A8734670061A9A4 /* Categories */,
+				D0EE15071A872BC40061A9A4 /* Views */,
 				D0A3B1A31A86CA20005E1200 /* View Controllers */,
 				D0A3B1A21A86CA17005E1200 /* Delegate */,
 				D0C15D5F1A86C58D00AD9D74 /* Images.xcassets */,
@@ -220,6 +234,28 @@
 				D0C15D6D1A86C58D00AD9D74 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0EE15071A872BC40061A9A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0EE15081A872BD60061A9A4 /* AVCamPreviewView.h */,
+				D0EE15091A872BD60061A9A4 /* AVCamPreviewView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D0EE15171A8734670061A9A4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D0EE150E1A8734640061A9A4 /* UIImage+AlphaAdditions.h */,
+				D0EE150F1A8734640061A9A4 /* UIImage+AlphaAdditions.m */,
+				D0EE15101A8734640061A9A4 /* UIImage+ResizeAdditions.h */,
+				D0EE15111A8734640061A9A4 /* UIImage+ResizeAdditions.m */,
+				D0EE15121A8734640061A9A4 /* UIImage+RoundedCornerAdditions.h */,
+				D0EE15131A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,12 +394,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EE15161A8734640061A9A4 /* UIImage+RoundedCornerAdditions.m in Sources */,
 				D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */,
 				D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */,
 				D0C15D551A86C58D00AD9D74 /* main.m in Sources */,
+				D0EE15151A8734640061A9A4 /* UIImage+ResizeAdditions.m in Sources */,
 				D0A3B1A11A86CA14005E1200 /* LoginViewController.m in Sources */,
+				D0EE15141A8734640061A9A4 /* UIImage+AlphaAdditions.m in Sources */,
+				D0EE150A1A872BD60061A9A4 /* AVCamPreviewView.m in Sources */,
+				D0EE150D1A872C3B0061A9A4 /* ImageCaptureViewController.m in Sources */,
 				D0EE15031A871F7D0061A9A4 /* ETTabBarController.m in Sources */,
-				D0EE15001A871A530061A9A4 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

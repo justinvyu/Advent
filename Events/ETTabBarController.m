@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
 
 // Create a custom UIButton and add it to the center of our tab bar
@@ -57,14 +59,18 @@
 - (void)setViewControllers:(NSArray *)viewControllers animated:(BOOL)animated {
     [super setViewControllers:viewControllers animated:animated];
     
-    [super setViewControllers:viewControllers animated:animated];
+    [self addCenterButtonWithImage:[UIImage imageNamed:@"camera-icon"] highlightImage:[UIImage imageNamed:@"camera-icon"]];
     
+        /*
     UIButton *cameraButton = [UIButton buttonWithType:UIButtonTypeCustom];
     cameraButton.frame = CGRectMake( 94.0f, 0.0f, 131.0f, self.tabBar.bounds.size.height);
     [cameraButton setImage:[UIImage imageNamed:@"camera-icon.png"] forState:UIControlStateNormal];
     //[cameraButton setImage:[UIImage imageNamed:@"ButtonCameraSelected.png"] forState:UIControlStateHighlighted];
     [cameraButton addTarget:self action:@selector(photoCaptureButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+     
+     
     [self.tabBar addSubview:cameraButton];
+         */
 }
 
 - (void)didReceiveMemoryWarning {

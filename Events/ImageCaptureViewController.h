@@ -1,5 +1,5 @@
 //
-//  TestViewController.h
+//  ImageCaptureViewController.h
 //  Events
 //
 //  Created by Justin Yu on 2/7/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestViewController : UIViewController
+@interface ImageCaptureViewController : UIViewController
 
 @end
