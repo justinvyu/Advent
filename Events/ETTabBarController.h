@@ -10,4 +10,7 @@
 
 @interface ETTabBarController : UITabBarController
 
+// Create a custom UIButton and add it to the center of our tab bar
+-(void) addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage;
+
 @end
