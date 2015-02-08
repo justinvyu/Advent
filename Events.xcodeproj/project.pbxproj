@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		713352EDEDB9A0A0D3445284 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DE61D236663DD3B7034CC16 /* libPods.a */; };
+		D023FE391A874E880031F4CB /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D023FE371A874E880031F4CB /* Main2.storyboard */; };
 		D0A3B1881A86C8CC005E1200 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B1871A86C8CC005E1200 /* AVFoundation.framework */; };
 		D0A3B18A1A86C8D6005E1200 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B1891A86C8D6005E1200 /* CoreLocation.framework */; };
 		D0A3B18C1A86C922005E1200 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A3B18B1A86C922005E1200 /* AudioToolbox.framework */; };
@@ -24,7 +25,6 @@
 		D0A3B1AC1A86F2CD005E1200 /* ETEventsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A3B1AB1A86F2CD005E1200 /* ETEventsTableViewController.m */; };
 		D0C15D551A86C58D00AD9D74 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D541A86C58D00AD9D74 /* main.m */; };
 		D0C15D581A86C58D00AD9D74 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D571A86C58D00AD9D74 /* AppDelegate.m */; };
-		D0C15D5E1A86C58D00AD9D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D5C1A86C58D00AD9D74 /* Main.storyboard */; };
 		D0C15D601A86C58D00AD9D74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D5F1A86C58D00AD9D74 /* Images.xcassets */; };
 		D0C15D631A86C58D00AD9D74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C15D611A86C58D00AD9D74 /* LaunchScreen.xib */; };
 		D0C15D6F1A86C58D00AD9D74 /* EventsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C15D6E1A86C58D00AD9D74 /* EventsTests.m */; };
@@ -50,6 +50,7 @@
 /* Begin PBXFileReference section */
 		0204F1340E7D5183D06E42FD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5DE61D236663DD3B7034CC16 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D023FE381A874E880031F4CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Events/Base.lproj/Main2.storyboard; sourceTree = "<group>"; };
 		D0A3B1871A86C8CC005E1200 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D0A3B1891A86C8D6005E1200 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D0A3B18B1A86C922005E1200 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -71,7 +72,6 @@
 		D0C15D541A86C58D00AD9D74 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0C15D561A86C58D00AD9D74 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0C15D571A86C58D00AD9D74 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0C15D5D1A86C58D00AD9D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0C15D5F1A86C58D00AD9D74 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0C15D621A86C58D00AD9D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D0C15D681A86C58D00AD9D74 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,7 +199,7 @@
 		D0C15D511A86C58D00AD9D74 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				D0C15D5C1A86C58D00AD9D74 /* Main.storyboard */,
+				D023FE371A874E880031F4CB /* Main2.storyboard */,
 				D0EE15171A8734670061A9A4 /* Categories */,
 				D0EE15071A872BC40061A9A4 /* Views */,
 				D0A3B1A31A86CA20005E1200 /* View Controllers */,
@@ -362,8 +362,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C15D5E1A86C58D00AD9D74 /* Main.storyboard in Resources */,
 				D0C15D631A86C58D00AD9D74 /* LaunchScreen.xib in Resources */,
+				D023FE391A874E880031F4CB /* Main2.storyboard in Resources */,
 				D0C15D601A86C58D00AD9D74 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,12 +448,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D0C15D5C1A86C58D00AD9D74 /* Main.storyboard */ = {
+		D023FE371A874E880031F4CB /* Main2.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D0C15D5D1A86C58D00AD9D74 /* Base */,
+				D023FE381A874E880031F4CB /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main2.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		D0C15D611A86C58D00AD9D74 /* LaunchScreen.xib */ = {
