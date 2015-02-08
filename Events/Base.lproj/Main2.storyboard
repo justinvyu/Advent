@@ -195,11 +195,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W88-Wq-Jc1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2L-aF-sNF">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="✕">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2R-Al-hVy">
+                                <rect key="frame" x="254" y="498" width="50" height="50"/>
+                                <state key="normal" backgroundImage="next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHv-mD-eD9">
+                                <rect key="frame" x="135" y="498" width="50" height="50"/>
+                                <state key="normal" backgroundImage="camera-icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" id="8LA-HO-4y0"/>
                     <connections>
+                        <outlet property="cancelButton" destination="x2L-aF-sNF" id="HN3-me-fnZ"/>
+                        <outlet property="imageDisplayView" destination="W88-Wq-Jc1" id="ZlK-6v-nha"/>
+                        <outlet property="nextButton" destination="u2R-Al-hVy" id="NJN-Ci-dLS"/>
                         <outlet property="previewView" destination="Ztx-e1-50o" id="9VA-XB-XqX"/>
                     </connections>
                 </viewController>
@@ -290,6 +313,10 @@
             <point key="canvasLocation" x="1251" y="1528"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera-icon" width="50" height="50"/>
+        <image name="next" width="42" height="42"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
