@@ -20,8 +20,6 @@
 
 @property (nonatomic) BOOL locked;
 
-
-
 @property (nonatomic) UIBackgroundTaskIdentifier photoPostBackgroundTaskId;
 
 @end
@@ -90,6 +88,7 @@
 }
 
 - (void)keyboardWillHide:(NSNotification *)note {
+    /*
     CGRect keyboardFrameEnd = [[note.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     CGSize scrollViewContentSize = self.scrollView.bounds.size;
     scrollViewContentSize.height -= keyboardFrameEnd.size.height;
@@ -97,6 +96,16 @@
         [self.scrollView setContentSize:scrollViewContentSize];
     }];
     self.locked = NO;
+    */
+    if (self.scrollView.bounds.size.height != self.view.bounds.size.height) {
+        CGSize scrollViewContentSize = self.view.bounds.size;
+        [UIView animateWithDuration:0.200f animations:^{
+            [self.scrollView setContentSize:scrollViewContentSize];
+        }];
+        
+        self.locked = NO;
+    }
+    
 }
 
 - (IBAction)touchUploadButton:(id)sender {
@@ -134,13 +143,10 @@
             NSLog(@"Error in uploading to Parse");
         }
         [[UIApplication sharedApplication] endBackgroundTask:self.photoPostBackgroundTaskId];
+        [self dismissViewControllerAnimated:YES completion:nil];
+
     }];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 
